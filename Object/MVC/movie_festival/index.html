@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <title>Movie List</title>
+</head>
+<body>
+    <h1>Movie Festival</h1>
+    <div class="wrapper">
+        <p>Please fill out the form:</p>
+        <p>Movie</p>
+        <form>
+            <label for="title">Title</label>
+            <input type="text" id="title"/>
+            <label for="length">Length (minutes)</label>
+            <input type="text" id="length"/>
+            <select id="genre">
+                <option value=""> - </option>
+                <option value="drama">Drama</option>
+                <option value="action">Action</option>
+                <option value="horror">Horror</option>
+                <option value="adventure">Adventure</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="thriller">Thriller</option>
+            </select>
+            <input type="button" value="Create movie" class="button" id="create-movie"/>
+        </form>
+        <p id="movie-error"></p>
+        <ul id="movie-list"></ul>
+        <p>Program</p>
+        <form>
+            <label for="date">Date</label>
+            <input type="date" placeholder="mm/dd/yyyy" id="date"/>
+            <input type="button" value="Create program" class="button" id="create-program"/>
+            <p id="program-error"></p>
+            <ul id="program-list"></ul>
+            <hr/>
+            <label for="movie-select">Movie</label>
+            <select id="movie-select">
+                <option value=""> - </option>
+            </select>
+            <label for="program-select">Program</label>
+            <select id="program-select">
+                <option value=""> - </option>
+            </select>
+            <input type="button" value="Add movie to program" class="button" id="add-movie"/>
+        </form>
+    </div>
+    
+    <script src="./js/entities.js"></script>
+    <script src="./js/controller.js"></script>
+</body>
+</html>
