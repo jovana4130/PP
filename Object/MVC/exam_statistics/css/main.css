@@ -73,8 +73,8 @@ button {
     cursor: pointer;
     display: inline-block;
     color: #B0E9D5;
-    font-weight: bold;
-
+    font-weight: normal;
+    font-size: x-large;
 }
 
 select {
@@ -87,14 +87,39 @@ select {
 
 #subject-results {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 #passed-col {
-
+    padding: 0%;
+    margin: auto;
 }
 
 #failed-col {
     color: red;
+    padding: 0%;
+    margin: auto;
 }
+li {
+    justify-content: left;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    
+}
+table {
+    width: 70%;
+}
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    };
+
+
