@@ -16,10 +16,14 @@
         <div id="failed"></div>
     </div>
     </div>
-    <form>
+    <form #id="form">
         <select id="subject">
+            <option value="Subject">Subject</option>
             <option value="javascript">JavaScript</option>
-            <option value="web">Web</option>
+            <option value="c++">C++</option>
+            <option value="phyton">Phyton</option>
+            <option value="ruby">Ruby</option>
+            <option value="web">HTML</option>
         </select>
         
         <label for="name"></label>
@@ -39,7 +43,7 @@
                 <option value="10">10</option>
         </select>
        
-        <button type="button" value="Add" class="button" id="Add">Add</button>
+        <button type="button" value="Add" class="button" id="Add">ADD</button>
         
     </form>
     <p id="name-error"></p>

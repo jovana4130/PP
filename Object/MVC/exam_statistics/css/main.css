@@ -1,4 +1,18 @@
+/* *,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+*/
+
 #header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url('./header.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,6 +47,22 @@ form {
     align-items: center;
     justify-content: center;
     align-content: center;
+    display:flex;
+}
+
+input {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#form, #name {
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    
 }
 
 button {
@@ -43,11 +73,17 @@ button {
     cursor: pointer;
     display: inline-block;
     color: #B0E9D5;
+    font-weight: bold;
 
 }
 
-
-
+select {
+  padding: 5px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
 
 
 
