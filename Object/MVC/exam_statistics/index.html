@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css"/>
+    <title>Exam Statistics</title>
+</head>
+<body>
+    <div id="header">
+    <h1>Exam statistic June</h1>
+    <p>Total students:</p>
+    <div>
+        <div id="passed"></div>
+        <div id="failed"></div>
+    </div>
+    </div>
+    <form>
+        <select id="subject">
+            <option value="javascript">JavaScript</option>
+            <option value="web">Web</option>
+        </select>
+        
+        <label for="name"></label>
+            <input type="text" id="name" placeholder="Name Surname"/>
+            
+        <select id="grade" placeholder="Grade">
+                <option value="Grade">Grade</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+        </select>
+       
+        <input type="button" value="Add" class="button" id="Add"/>
+        
+    </form>
+    <p id="name-error"></p>
+    <p id="grade-error"></p>
+    <ul id="passed-stud"></ul>
+    <ul id="failed-stud"></ul>
+</body>
+</html>

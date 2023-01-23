@@ -1,0 +1,32 @@
+#header {
+    background-image: url('./header.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#passed {
+    display: flex;
+    justify-content: center;
+    color: black;
+    max-height: 5px;
+    max-width: 20px;
+    background-color: aquamarine;
+    text-align: left;
+}
+
+#failed {
+    display: flex;
+    color: black;
+    max-height: 5px;
+    max-width: 20px;
+    background-color: tomato;
+    text-align: left;
+}
+
+
+
+
+

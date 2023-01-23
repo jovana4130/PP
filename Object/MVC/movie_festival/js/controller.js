@@ -114,6 +114,7 @@ function addMovieToProgram() {
   //validate inputs
   if (!movieIndex || !programIndex) {
     addMovieErrorElement.textContent = 'Invalid input';
+    return;
   }
 
   var movie = festival.listOfAllMovies[movieIndex];
