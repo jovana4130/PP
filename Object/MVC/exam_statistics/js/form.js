@@ -4,16 +4,24 @@ class Form extends Exam {
     constructor (subject, name, surname, grade) {
         super(subject, name, surname, grade);
     }
+    getFormInfo() {
+        var firstLetter = this.name[0].toUpperCase() + this.surname[0].toUpperCase();
+        return 'Subject: ' + subject + 'Student: ' + firstLetter + 'Grade: ';
+    };
+};
+
+function collectAllData() {
+
+};
 /*    if ( document.Form.name.value === ' ')
         return 'Please provide your Name and Surname';
 };*/
 
 var nameInputValue = inputNameElement.value;
 
-    if (nameInputValue === ' ')
+    if (nameInputValue === ' ') 
         inputNameElement.textContent = 'Please provide your Name and Surname';
         return;
-    };
 
 
 
@@ -23,8 +31,8 @@ var dateInputValue = inputDateElement.value;
 
 var Student = new Student();
 
-var addStudentErrorElement = document.querySelector('#add-student-error');
 var addSubjectErrorElement = document.querySelector('#add-subject-error');
+var addStudentErrorElement = document.querySelector('#add-student-error');
 var addGradeErrorElement = document.querySelector('#add-grade-error');
 
 function newStudent() {
@@ -45,4 +53,4 @@ function newStudent() {
         return;
     }
 
-}
+};
