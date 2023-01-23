@@ -13,7 +13,7 @@
     color: black;
     max-height: 5px;
     max-width: 20px;
-    background-color: aquamarine;
+    background-color: #B0E9D5;
     text-align: left;
 }
 
@@ -25,6 +25,28 @@
     background-color: tomato;
     text-align: left;
 }
+
+form {
+    background-color: #E5E4E2;
+    padding: 5px;
+    position: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: #B0E9D5;
+
+}
+
+
 
 
 
