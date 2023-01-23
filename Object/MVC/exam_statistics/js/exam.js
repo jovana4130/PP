@@ -12,7 +12,7 @@ class Exam extends Subject  {
         return 'Subject: ' + subject + 'Student: ' + firstLetter;
     }
     hasPassed() {
-        if (this.grade > 5 === "Passed") {
+        if (this.grade > 5 === 'Passed') {
             this.grade > 5 !== 'Failed';
         };
     }

@@ -8,6 +8,8 @@ Student.prototype.getStudentData = function () {
     return 'Student: ' + firstLetter;
 };*/
 
+'use strict';
+
 class Student {
     constructor(name, surname) {
         this.name = name;
