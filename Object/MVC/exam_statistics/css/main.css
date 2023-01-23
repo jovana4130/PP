@@ -85,6 +85,16 @@ select {
   background-color: white;
 }
 
+#subject-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
 
+#passed-col {
 
+}
 
+#failed-col {
+    color: red;
+}
