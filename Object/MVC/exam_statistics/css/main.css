@@ -16,6 +16,9 @@
     background-image: url('./header.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
     color: white;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -90,8 +93,9 @@ select {
     /*flex-wrap: wrap;*/
     justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+};
 
-}
 
 #passed-col {
     padding: 0%;
@@ -104,22 +108,20 @@ select {
     margin: auto;
 }
 li {
+    height: 2rem;
     justify-content: left;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
 }
 
-/*th, td {
-    text-align: left;
-    padding: 8px;
-    
-}*/
-table {
-    width: 70%;
-}
-    tr:nth-child(even) {
+li:nth-child(even) {
         background-color: #f2f2f2;
-    };
+};
+
+li:nth-child(odd) {
+    border-bottom: 1.5px solid #E5E4E2;
+    border-top: 1.5px solid #E5E4E2;
+};
 
 

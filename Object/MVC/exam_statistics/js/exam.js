@@ -9,10 +9,10 @@ class Exam extends Subject  {
     }
     getExamInfo() {
         var firstLetter = this.name[0].toUpperCase() + this.surname[0].toUpperCase();
-        return 'Subject: ' + subject + 'Student: ' + firstLetter;
+        return 'Subject: ' + subject + 'Student: ' + firstLetter + this.grade;
     }
     hasPassed() {
-        if (this.grade > 5 === 'Passed') {
+        if (this.grade.value > 5) {
             return true;
         } else {
             return false;
