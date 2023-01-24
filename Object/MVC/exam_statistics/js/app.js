@@ -37,3 +37,6 @@ if(failedCount === 0){
     var percentage = (failedCount / studentCount) * 100;
     percentageFailed.textContent = percentage.toFixed(0) + "%";
 };
+
+
+

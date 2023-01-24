@@ -51,25 +51,29 @@ function newStudent() {
 
 };*/
 
-var subjectValue = inputSubjectElement.value;
-var nameValue = inputNameElement.value;
-var gradeValue = inputGradeElement.value;
+'use strict';
 
-if (!subjectValue) {
-    inputSubjectElement.textContent = 'Please choose the Subject, from the drop down menu.';
-    return;
-}
-if (!nameValue) {
-    inputNameElement.textContent = 'Please provide your Name and Surname.';
-    return;
-}
-if (!gradeValue) {
-    inputGradeElement.textContent = 'Please choose the Grade, from the drop down menu.';
-    return;
+function collectAllData() {
+    var subjectValue = inputSubjectElement.value;
+    var nameValue = inputNameElement.value;
+    var gradeValue = inputGradeElement.value;
+
+    if (!subjectValue) {
+        inputSubjectElement.textContent = 'Please choose the Subject, from the drop down menu.';
+        return;
+    }
+    if (!nameValue) {
+        inputNameElement.textContent = 'Please provide your Name and Surname.';
+        return;
+    }
+    if (!gradeValue) {
+        inputGradeElement.textContent = 'Please choose the Grade, from the drop down menu.';
+        return;
+    };
 };
 
 studentCount++;
 totalStudentCount.textContent = studentCount;
 
 var newItem = document.createElement("li");
-newItem.textContent = subject + " - " + student + "                              " + grade;
+newItem.textContent = subject + " - " + student + "     " + grade;

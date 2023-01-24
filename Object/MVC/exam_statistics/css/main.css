@@ -32,6 +32,12 @@
     max-width: 20px;
     background-color: #B0E9D5;
     text-align: left;
+    /*
+    background-color: cadetblue;
+    margin-bottom: 20px;
+    width: 51%;
+    display: flex;
+    justify-content: space-around;*/
 }
 
 #failed {
@@ -41,6 +47,19 @@
     max-width: 20px;
     background-color: tomato;
     text-align: left;
+    /*
+    background-color: tomato;
+    margin-bottom: 20px;
+    width: 51%;
+    display: flex;
+    justify-content: space-around;*/
+}
+
+#totalstudents {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 form {
@@ -86,6 +105,11 @@ select {
   border: none;
   border-radius: 5px;
   background-color: white;
+}
+
+.error{
+    border-style: 1px solid red;
+    color: red;
 }
 
 #subject-results {
