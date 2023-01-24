@@ -13,10 +13,11 @@ class Exam extends Subject  {
     }
     hasPassed() {
         if (this.grade > 5 === 'Passed') {
-            this.grade > 5 !== 'Failed';
-            //morace value
+            return true;
+        } else {
+            return false;
         };
-    }
+    };
 };
 
 
