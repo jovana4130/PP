@@ -110,11 +110,11 @@ li {
     flex-wrap: wrap;
 }
 
-th, td {
+/*th, td {
     text-align: left;
     padding: 8px;
     
-}
+}*/
 table {
     width: 70%;
 }
