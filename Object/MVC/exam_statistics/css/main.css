@@ -129,7 +129,6 @@ select {
 #failed-col {
     color: red;
     padding: 0%;
-
 }
 li {
     height: 2rem;
@@ -139,11 +138,11 @@ li {
     flex-wrap: wrap;
 }
 
-li:nth-child(even) {
+li:nth-child(odd) {
         background-color: #f2f2f2;
 };
 
-li:nth-child(odd) {
+li:nth-child(even) {
     border-bottom: 1.5px solid #E5E4E2;
     border-top: 1.5px solid #E5E4E2;
 };
