@@ -5,7 +5,7 @@ Output: yes
 Input: e = 3, a = [5, -4.2, 18, 7]
 Output: no */
 
-var a = [5, -4.2, 18, 7];
+var a = [5, -4.2, 18, 7, 3];
 var e = 3;
 
 for (i = 0; i < a.length; i++) {
@@ -13,9 +13,22 @@ for (i = 0; i < a.length; i++) {
     console.log('Output: yes');
     } else {
         console.log('Output: no');
-    }
-}
+    };
+};
 
+// drugi nacin
+
+var a = [5, -4.2, 3, 7];
+var e = 3;
+result = 'no';
+
+for (i = 0; i < a.length; i++) {
+    if (e === a[i]) {
+        result = 'Output: yes';
+        break;
+    };
+};
+console.log(result);
 
 /* Exercises 2. 
 Write a program that multiplies every positive element of a given array by 2.
@@ -27,8 +40,8 @@ var a = [-3, 11, 5, 3.4, -8];
 for (var i = 0; i < a.length; i++) {
     if (a[i] > 0) {
         a[i] *= 2;
-    }
-}
+    };
+};
 console.log(a);
 
 
@@ -45,8 +58,8 @@ for (var i = 0; i < a.length; i++) {
     if (a[i] < minimum) {
         minimum = a[i];
         var index = i;
-    }
-}
+    };
+};
 console.log(minimum +', ' + index);
 
 
@@ -63,15 +76,14 @@ var newminimum = a[0];
 for (var i = 0; i < a.length; i++) {
     if (a[i] < minimum) {
         minimum = a[i];
-    } 
-
-}
+    };
+};
 console.log(minimum);
 
 for (var i = 0; i < a.length; i++) {
     if (a[i] < newminimum && a[i] !== minimum)
     newminimum = a[i]
-}
+};
 console.log(newminimum);
 
 /* Exercises 5. 
@@ -85,8 +97,8 @@ var sumpositive = 0;
 for (var i = 0; i < a.length; i++) {
     if (a[i] > 0) {
         sumpositive += a[i];
-    }
-}
+    };
+};
 console.log(sumpositive);
 
 
@@ -103,11 +115,11 @@ var result = '';
 
 for (var i = 0, j = a.length-1; i <= j; i++, j--) {
     if (a[i] !== a[j]) {
-        result = 'The array isnt symmetric'
+        result = 'The array isnt symmetric.'
     } else {
-        result = 'The result is symetric'
-    }
-}
+        result = 'The result is symetric.'
+    };
+};
 console.log(result);
 
 var a = [3, 4, 12, 8];
@@ -115,13 +127,12 @@ var result = '';
 
 for (var i = 0, j = a.length-1; i <= j; i++, j--) {
     if (a[i] !== a[j]) {
-        result = 'The array isnt symmetric'
+        result = 'The array isnt symmetric.'
     } else {
-        result = 'The result is symetric'
-    }
-}
+        result = 'The result is symetric.'
+    };
+};
 console.log(result);
-
 
 
 /* Exercises 7. 
@@ -135,9 +146,9 @@ var b = [3, 8, 11, 9];
 var c = [];
 
 for (var i = 0; i < a.length; i++) {
-    c[2 * i] = a[i] 
-    c[2 * i + 1] == b[i];
-} 
+    c[c.length] = a[i] 
+    c[c.length] == b[i];
+};
 console.log(c);
 
 
@@ -151,20 +162,20 @@ var b = [3, 8, 11, 9];
 var c = [];
 var i = 0;
 
-for (i=0; i < (a.length); i++) {
+for (var i = 0; i < (a.length); i++) {
     c[c.length] = a[i];
 }
-for (var j=0; j < (b.length); j++) {
+for (var j = 0; j < (b.length); j++) {
     c[c.length] = b[j];
-}
-
+};
 console.log(c);
 
+//drugi nacin 
 
 var a = [4, 5, 6, 2];
 var b = [3, 8, 11, 9];
 console.log([a+b]);
-var c = [a + ',' + b];
+var c = [a + b];
 
 console.log(c);
 
@@ -175,13 +186,13 @@ Input: e = 2, a = [4, 6, 2, 8, 2, 2] */
 var e = 2;
 var a = [4, 6, 2, 8, 2, 2];
 
-
 for (var i = 0; i < a.length; i++) {
-    if (a[i] == e) {
+    if (a[i] === e) {
     delete a[i];
-}
-}
+    };
+};
 console.log(a);
+
 
 /*Output array: [4, 6, 8]
 Exercises 10. 
@@ -197,10 +208,10 @@ var a = [2, -2, 33, 12, 5, 8];
 for (var i = 0; i < a.length; i++) {
     if (a[i] == 3) {
        a[3] == e;  
-} else {
-    'Error message';
-}
-}
+    } else {
+    'Error message.';
+    };
+};
 console.log(a);
 
 var e = 78;
@@ -209,7 +220,6 @@ var a = [2, -2, 33, 12, 5, 8];
 var i = 0;
 var j = 0;
 var resultArray = [];
-
 
 for (i=0; i < a.length + 1; i++) {
     if (p > a.length) {
@@ -221,29 +231,8 @@ for (i=0; i < a.length + 1; i++) {
             resultArray[i] = e;
         } else {
             resultArray[i] = a[i-1];
-        }
-    }
+        };
+    };
 
-}
-
+};
 console.log(resultArray);
-
-
-ljubica:
-var a = [2, -2, 33, 12, 5, 8];
-var e = 78; 
-var p = 3;
-for (var i = 0; i < a.length; i++) {
-    if (p > a.length) {
-        console.log("Error");
-    } else {
-        if (i < p) {
-            a[i];
-        } else if (i == p) {
-            a[i] = e;
-        } else {
-            a[i] = a[i - 1];
-        }
-}
-}
-console.log(a);
