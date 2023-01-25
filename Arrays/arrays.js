@@ -7,6 +7,8 @@ console.log(months[5]);
 console.log(months[9]);
 console.log(months[0]);
 
+console.log(months[5],months[9],months[0]);
+
 /*Exersize 2. 
 Write an arrays of days in a week. Using console.log display Sunday from the array. */
 
@@ -20,6 +22,8 @@ var elements = [2, -4, 5, -2, -11];
 console.log(elements[1]);
 console.log(elements[3]);
 console.log(elements[4]);
+
+console.log(elements[1], elements[3], elements[4]);
 
 /*Exersize 4. 
 Print all elements with indices divisible by 3 from the array [5, 15, -5, 20, 12, 18,
@@ -36,8 +40,16 @@ console.log(elements[6]%3===0);
 console.log(elements[7]%3===0);
 console.log(elements[8]%3===0);
 
-/*Exersize 5. 
-What is the index of number 24 in the following array?*/
+console.log(elements[1], elements[4], elements[5], elements[6], elements[8]);
 
-array = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
-console.log(elements);
+/*Exersize 5. 
+What is the index of number 24 in the following array?
+
+Using console.log:
+● Display the 3rd element of the array,
+● Display the 2nd element of the 3rd element.*/
+
+var array = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+console.log(array);
+console.log(array[2]);
+console.log(array[1][2]);
