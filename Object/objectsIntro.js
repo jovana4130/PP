@@ -22,10 +22,8 @@ var favMovie = {
     director: 'George Lucas',
     genre: 'Science Fiction',
     popularity: 'Oscar 1978.',
-}
-
+};
 console.log(favMovie.director);
-
 
 /*Exercise 3. 
 Write a function that creates an object that represents a project. Each project is
@@ -34,22 +32,20 @@ says if the project is in development or not. Add a method that prints out the p
 repository, a method that checks if the project is written in JavaScript as well as a
 method that checks if the project is in development or not.*/
 
-var projectDestroyDeathStar = {
+/*var projectDestroyDeathStar = {
     description: 'Steal the plans and destroy the Death Star. Save Alderaan',
     language: 'JavaScript',
     repository: 'https://github.com/vezbanje',
     booleanStatusOfProject: 'in development',
-
-}
-
+};
 console.log(projectDestroyDeathStar);
 
 function JavaScriptUsed (n) {
     for (i = 0; i.length; i++) {
         if (projectDestroyDeathStar = n)
-        return true
-        return false
-    }
+        return true;
+        return false;
+    };
     /*if true ; 
     return 'This project is written in JavaScript.'
     if false ;
@@ -58,7 +54,7 @@ function JavaScriptUsed (n) {
     
     console.log('JavaScript'); */
 
-var p = function project (desc, lang, git, dev) {
+var project = function project (desc, lang, git, dev) {
 return {
     description: desc,
     programmingLanguage: lang,
@@ -81,10 +77,10 @@ return {
                         return "Project is not in development";
                     }
                 }) ()
-    }
+    };
 };
 
-console.log(p("Environment Quality Improval", "PHP", "fsdfdf.github.com", true))
+console.log(project('Steal the plans and destroy the Death Star. Save Alderaan', 'JavaScript', 'https://github.com/vezbanje', true));
 
 
 
