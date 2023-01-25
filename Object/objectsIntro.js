@@ -184,14 +184,7 @@ function createRecipe(n, ct, cm, ing, t, ins) {
   return recipe;
 }
 
-var p = createRecipe(
-    'Gimbap',
-    'korean',
-    2,
-    ['rice','vegetables','seaweed','oil','sesame seads'],
-    30,
-    'Steam the rice and cut avaiable vegetables in stripes. When the rice is done, spread the seaweed and put equal level of the rice coat. Add the vegetables, and carefully roll the gimbap. When rolled, cover the rolls with sesame seeds. Cut it, and its ready! 맛있게 드세요!'
-);
+var p = createRecipe('Gimbap','korean', 2, ['rice','vegetables','seaweed','oil','sesame seads'], 30, 'Steam the rice and cut avaiable vegetables in stripes. When the rice is done, spread the seaweed and put equal level of the rice coat. Add the vegetables, and carefully roll the gimbap. When rolled, cover the rolls with sesame seeds. Cut it, and its ready! 맛있게 드세요!');
 console.log(p);
 p.printIng();
 p.deleteIngridient('oil');
