@@ -1,15 +1,22 @@
-/*1. Write a functional expression that duplicates each element of a given array. 
+/* Exercise 1. 
+Write a functional expression that duplicates each element of a given array. 
 Input: [2, 4, 7, 11, -2, 1]
 Output: [2, 2, 4, 4, 7, 7, 11, 11, -2, -2, 1, 1] */
 
-var a = [2, 4, 7, 11, -2, 1];
-a.push(2, 4, 7, 11, -2, 1);
+var a = function duplicates(array) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        newArray.push(array[i], array [i])
+    } return newArray;
+};
 
-console.log(a);
+console.log(a([2, 4, 7, 11, -2, 1]));
 
 
 
-/* 2. Write a functional expression that removes all duplicates in a given array.
+
+/* Exercise 2. 
+Write a functional expression that removes all duplicates in a given array.
 Input: [8, 13, 8, 9, 12, 8, 1, 1, 4, 13]
 Output: [1, 4, 8, 9, 12, 13] */
 
@@ -21,7 +28,7 @@ var result = b.filter((e, index) => {
 console.log(result);
 
 
-/* 3. 
+/* Exercise 3. 
 a) Write a function that checks if a given array has odd number of elements.
 Input: [1, 2, 9, 2, 1]
 Output: true */
@@ -98,7 +105,8 @@ function countEl(arr) {
 console.log(countEl([-1, 8.1, 3, 6, 2.3, 44, 2.11]));
 
 
-/* 4. Write a function that finds the smallest element of a given array. The function should
+/* Exercise 4. 
+Write a function that finds the smallest element of a given array. The function should
 return an object that contains the smallest value and its last position in the array.
 Input: [1, 4, -2, 11, 8, 1, -2, 3]
 Output: { minValue: -2, minLastIndex: 6 } */
@@ -106,7 +114,7 @@ Output: { minValue: -2, minLastIndex: 6 } */
 var e = [1, 4, -2, 11, 8, 1, -2, 3];
 
 
-/* 5.
+/* Exercise 5.
 a. Write a function that finds all the elements in a given array less than a given element.
 Input: [2, 3, 8, -2, 11, 4], 6
 Output: [2, 3, -2, 4] */
@@ -213,7 +221,7 @@ console.log(newVal);
 
 /* c. Write a function that expects an array and a callback function that filters out some of the elements. Use functions defined in a) or b) to test it. */
 
-/* 6. 
+/* Exercise 6. 
     a. Write a list (array) of products you usually buy in the supermarket. Write a price and name for each product. For example,
 [
 {name: ‘apples’, price: 100},
@@ -253,9 +261,9 @@ var shoppingList = [
     {name: 'milk', price: 80},
     {name:'bananas', price: 150}
 ];
-function calculateAverage 
+/*function calculateAverage 
 
 
 
-var price = ;
-var price3dec = price.toFixed(3);
+var price = 0;
+var price3dec = price.toFixed(3);*/
