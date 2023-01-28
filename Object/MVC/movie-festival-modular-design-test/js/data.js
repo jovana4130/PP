@@ -1,6 +1,16 @@
 'use strict'
 
 var dataModule = (function () {
+    var festival = createFestival();
+
+    function Festival() {
+        this.listOfAllMovies = [];
+        this.listOfPrograms = [];
+    }
+
+    function createFestival() {
+    }
+
     class Movie {
         constructor (title, length, genre) {
         this.title = title;
@@ -8,16 +18,28 @@ var dataModule = (function () {
         this.genre = genre;
         };
 
-    getGenre() {
+        getGenreCode() {
         var firstLetter = this.genre[0].toUpperCase();
         var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
         return firstLetter + lastLetter;
         };
-
-    getData() {
-        return this.title + ', ' + this.length + 'min ' + this.getGenre();
-        };
     };
+    
+    Movie.prototype.getData = function() {
+        return this.title + ', ' + this.length + 'min ' + this.getGenre();
+    };
+    
+    function createMovie(title, length, genre) {
+        return new Movie(title, length, genre);
+    }
+
+    function addMovie(movie) {
+        return festival.listOfAllMovies.push(movie) -1;
+    }
+
+    function isValidMovie(title, length, genre) {
+        
+    }
 
     class Program {
         constructor(date) {

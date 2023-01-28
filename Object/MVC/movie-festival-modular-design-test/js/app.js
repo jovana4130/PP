@@ -33,7 +33,19 @@ var mainModule = (function (ui, data) {
     };
 
     var onAddMovieToProgramClickHandler = function() {
+        var formData = ui.collectAddMovieFormData();
+        var updatedProgram = data.addMovieToProgram(formData.movieIndex, formData.programIndex);
+        if (!updatedProgram) {
+            ui.setMovieProgramError('Invalid input');
+            return;
+        }
+        ui.updateProgramData(updatedProgram.program, updatedProgram.oldProgram);
 
+
+        /*var createdProgram = data.createProgram(formData.date)
+        var index = data.addProgram(createdProgram);
+        ui.updateProgramList(createdProgram, index);
+        ui.clearInputs();*/
     };
 
     createMovieButton.addEventListener('click', onMovieCreateClickHandler);
