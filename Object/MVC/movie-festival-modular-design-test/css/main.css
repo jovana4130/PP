@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrapper {
+    width: 60%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    width: 100%;
+}
+
+select {
+    height: 25px;
+}
+
+input {
+    padding: 5px;
+}
+
+.button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    padding: 4px;
+}
+
+form {
+    border: 1px solid black;
+    width: 100%;
+    padding: 20px;
+}
+
+#movie-error, #program-error, #add-movie-error {
+    color: red;
+}

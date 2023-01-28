@@ -22,7 +22,7 @@
     color: white;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+};
 
 #passed {
     display: flex;
@@ -40,7 +40,7 @@
     width: 51%;
     display: flex;
     justify-content: space-around;*/
-}
+};
 
 #failed {
     display: flex;
@@ -58,14 +58,14 @@
     width: 51%;
     display: flex;
     justify-content: space-around;*/
-}
+};
 
 #totalstudents {
     width: 60%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+};
 
 form {
     background-color: #E5E4E2;
@@ -75,11 +75,11 @@ form {
     justify-content: center;
     align-content: center;
     display:flex;
-}
+};
 
 input {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+};
 
 #form, #name {
     justify-content: center;
@@ -90,7 +90,7 @@ input {
     border-radius: 5px;
     background-color: white;
     color: rgb(56, 53, 53);
-}
+};
 
 button {
     border: none;
@@ -110,12 +110,12 @@ select {
   border: none;
   border-radius: 5px;
   background-color: white;
-}
+};
 
 .error{
     border-style: 1px solid red;
     color: red;
-}
+};
 
 #subject-results {
     display: flex;
@@ -130,19 +130,20 @@ select {
     padding: 0%;
     margin: auto;
     color: rgb(56, 53, 53);
-}
+};
 
 #failed-col {
     color: red;
     padding: 0%;
-}
+};
+
 li {
     height: 2rem;
     justify-content: left;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
-}
+};
 
 li:nth-child(odd) {
         background-color: #f2f2f2;
