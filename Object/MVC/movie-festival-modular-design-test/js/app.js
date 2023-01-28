@@ -5,9 +5,49 @@ var mainModule = (function (ui, data) {
     createProgramButton = documetn.querySelector('#add-program'),
     addMovieToProgramButton = document.querySelector('#add-movie');
 
-    createMovieButton.addEventListener('click', function () {
-    });
+    var onMovieCreateClickHandler = function () {
+        var formData = ui.collectProgramData();
+        var isValid = data.isValidProgram(formData.date);
+        if (!isValid) {
+            ui.setProgramError('Invalid input');
+            return;
+        }
+        var createdMovie = data.createMovie(formData.title, formData.length, formData.genre
+        );
+        var index = data.addMovie(createdMovie);
+        ui.updateMovieList(createdMovie, index);
+        ui.clearInputs();
+    };
 
+    var onProgramCreateClickHandler = function() {
+        var formData = ui.collectProgramData();
+        var isValid = data.isValidProgram(formData.date);
+        if (!isValid) {
+            ui.setProgramError('Invalid input');
+            return;
+        }
+        var createdProgram = data.createProgram(formData.date)
+        var index = data.addProgram(createdProgram);
+        ui.updateProgramList(createdProgram, index);
+        ui.clearInputs();
+    };
+
+    var onAddMovieToProgramClickHandler = function() {
+
+    };
+
+    createMovieButton.addEventListener('click', onMovieCreateClickHandler);
+
+    createProgramButton.addEventListener('click', onProgramCreateClickHandler);
+
+    addMovieToProgramButton.addEventListener('click', onAddMovieToProgramClickHandler);
+    
+})(uiModule, dataModule);
+
+
+
+ /* createMovieButton.addEventListener('click', function () {
+    });
     createProgramButton.addEventListener('click', function () {
         var formData = ui.collectProgramData();
         var isValid = data.isValidProgram(formData.date);
@@ -24,14 +64,6 @@ var mainModule = (function (ui, data) {
         ui.updateMovieList(createdMovie, index);
         ui.clearInputs();
     });
-    var onProgramCreateClickHandler = function() {
-
-    }
-    var onAddMovieToProgramClickHandler = function() {
-
-    }
-        
-    });
 
     addMovieToProgramButton.addEventListener('click', function () {
         var formData = ui.collectAddMovieFormData();
@@ -41,4 +73,4 @@ var mainModule = (function (ui, data) {
         );
         }
 
-)();
+    })(uiModule, dataModule);*/
