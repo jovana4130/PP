@@ -74,6 +74,3 @@ function collectAllData() {
 
 studentCount++;
 totalStudentCount.textContent = studentCount;
-
-var newItem = document.createElement("li");
-newItem.textContent = subject + " - " + student + "     " + grade;
