@@ -1,3 +1,5 @@
+'use strict'
+
 function Festival() {
     this.listOfAllMovies = [];
     this.listOfPrograms = [];

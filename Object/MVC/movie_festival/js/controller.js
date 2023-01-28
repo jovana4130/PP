@@ -1,3 +1,5 @@
+'use strict'
+
 var festival = new Festival();
 
 var createMovieButton = document.querySelector('#create-movie');
