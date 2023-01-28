@@ -1,3 +1,5 @@
+'use strict'
+
 var mainModule = (function (ui, data) {
     var createMovieButton = document.querySelector('#create-movie'),
     createProgramButton = documetn.querySelector('#add-movie'),
@@ -22,8 +24,7 @@ var mainModule = (function (ui, data) {
         var updatedProgram = data.addMovieToProgram(
             formData.movieIndex,
             formData.programIndex
-    });
+        );
+        }
 
-}
-
-)
+)();
