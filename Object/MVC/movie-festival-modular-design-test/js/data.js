@@ -50,6 +50,7 @@ var dataModule = (function () {
         }
     }
 
+    /*class Festival {}*/
 
     
 })();
