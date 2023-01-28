@@ -2,7 +2,7 @@
 
 var mainModule = (function (ui, data) {
     var createMovieButton = document.querySelector('#create-movie'),
-    createProgramButton = documetn.querySelector('#add-movie'),
+    createProgramButton = documetn.querySelector('#add-program'),
     addMovieToProgramButton = document.querySelector('#add-movie');
 
     createMovieButton.addEventListener('click', function () {
@@ -15,7 +15,21 @@ var mainModule = (function (ui, data) {
             ui.setProgramError('Invalid input');
             return;
         }
+        createMovie = data.createMovie(
+            formData.title,
+            formData.length,
+            formData.genre
+        );
+        var index = data.addMovie(createdMovie);
+        ui.updateMovieList(createdMovie, index);
+        ui.clearInputs();
+    });
+    var onProgramCreateClickHandler = function() {
 
+    }
+    var onAddMovieToProgramClickHandler = function() {
+
+    }
         
     });
 

@@ -1,5 +1,6 @@
 'use strict'
 
+var uiModule = (function() {
 selectGenreElement = document.querySelector('#genre');
 movieSelectElement = document.querySelector('#movie-select');
 ulMovieListElement = document.querySelector('#movie-list');
@@ -12,7 +13,12 @@ programSelectElement = document.querySelector('#program-select');
 function collectMovieData(){
 
 }
-
+function clearInputs() {
+    movieErrorElement.textContent = '';
+    inputTitleElement.value = '';
+    inputLenghtElement.value = '';
+    selectGenreElement.value = '';
+}
 function collectProgramData() {
 
 }
@@ -37,6 +43,6 @@ return {
     setMovieToProgramError: setMovieToProgramError,
     updateProgramData: updateProgramData,
     };
-})();
+}());
 
 

@@ -43,36 +43,13 @@ var dataModule = (function () {
         }
 
         getData() {
-            
+            var day = this.date.getDate();
+            var month = this.date.getMonth() + 1;
+            var year = this.date.getFullYear();
+            var formatedDate = day + ', ' + (this.movieList.length) + ' movies, duration ' + this.getTotalMoviesLength() + 'min';
         }
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    var festival = createFestival();
-
-    function Festival() {
-        this.listOfAllMovies = [];
-        this.listOfPrograms = [];
-    }
-    function createFestival(){
-        return new Festival();
-    }
-    class Movie(title, length, genre) {
-        this.title = title;
-        this.length = parseInt(length);
-        this.genre = genre;
-    };
-    Movie.prototype.getGenre
-}
-)
-
+    
+})();
