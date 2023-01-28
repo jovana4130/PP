@@ -3,13 +3,15 @@
 var dataModule = (function () {
     var festival = createFestival();
 
-    function Festival() {
+    class Festival {
+        constructor() {
         this.listOfAllMovies = [];
         this.listOfPrograms = [];
+        };
     };
 
-    function createFestival() {
-    }
+    /*function createFestival() {
+    }*/
 
     class Movie {
         constructor (title, length, genre) {
@@ -23,23 +25,25 @@ var dataModule = (function () {
         var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
         return firstLetter + lastLetter;
         };
+
+        getData() {
+            return this.title + ', ' + this.length + 'min ' + this.getGenre();
     };
     
-    Movie.prototype.getData = function() {
-        return this.title + ', ' + this.length + 'min ' + this.getGenre();
-    };
-    
-    function createMovie(title, length, genre) {
+    createMovie() {
         return new Movie(title, length, genre);
-    }
+    };
 
-    function addMovie(movie) {
+    addMovie() {
         return festival.listOfAllMovies.push(movie) -1;
-    }
+    };
 
-    function isValidMovie(title, length, genre) {
-
-    }
+    isValidMovie() {
+            if (!title || !genre || !length) {
+                return false;
+            } return true;
+    };   
+    };
 
     class Program {
         constructor(date) {
@@ -59,20 +63,15 @@ var dataModule = (function () {
             var total = 0;
             this.movieList.forEach(function (movie) {
                 total += movie.length;
-            
             }); 
             return total;
-        }
+        };
 
         getData() {
             var day = this.date.getDate();
             var month = this.date.getMonth() + 1;
             var year = this.date.getFullYear();
             var formatedDate = day + ', ' + (this.movieList.length) + ' movies, duration ' + this.getTotalMoviesLength() + 'min';
-        }
-    }
-
-    /*class Festival {}*/
-
-    
+        };
+    };
 })();

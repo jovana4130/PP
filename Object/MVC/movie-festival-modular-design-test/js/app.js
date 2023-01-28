@@ -2,7 +2,7 @@
 
 var mainModule = (function (ui, data) {
     var createMovieButton = document.querySelector('#create-movie'),
-    createProgramButton = documetn.querySelector('#add-program'),
+    createProgramButton = documetn.querySelector('#create-program'),
     addMovieToProgramButton = document.querySelector('#add-movie');
 
     var onMovieCreateClickHandler = function () {
@@ -40,12 +40,6 @@ var mainModule = (function (ui, data) {
             return;
         }
         ui.updateProgramData(updatedProgram.program, updatedProgram.oldProgram);
-
-
-        /*var createdProgram = data.createProgram(formData.date)
-        var index = data.addProgram(createdProgram);
-        ui.updateProgramList(createdProgram, index);
-        ui.clearInputs();*/
     };
 
     createMovieButton.addEventListener('click', onMovieCreateClickHandler);
