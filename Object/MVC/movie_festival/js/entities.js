@@ -42,7 +42,7 @@ Program.prototype.addMovie = function (movie) {
 
 Program.prototype.getTotalMovies = function () {
     return this.listOfMovies.length;
-}
+};
 
 Program.prototype.getData = function () {
     var day = this.date.getDate();
@@ -53,5 +53,5 @@ Program.prototype.getData = function () {
 
     resultStr += ', ' + this.getTotalMovies() + ' movies, duration: ' + this.lengthOfAllMovies() + 'minutes';
     return resultStr;
-}
+};
 

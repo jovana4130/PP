@@ -6,7 +6,7 @@ var dataModule = (function () {
     function Festival() {
         this.listOfAllMovies = [];
         this.listOfPrograms = [];
-    }
+    };
 
     function createFestival() {
     }
@@ -38,7 +38,7 @@ var dataModule = (function () {
     }
 
     function isValidMovie(title, length, genre) {
-        
+
     }
 
     class Program {

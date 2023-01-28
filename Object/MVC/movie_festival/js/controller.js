@@ -28,15 +28,15 @@ function addMovie() {
   if (!titleValue) {
     movieErrorElement.textContent = 'Title is required!';
     return;
-  }
+  };
   if (!genreValue) {
     movieErrorElement.textContent = 'Genre is required!';
     return;
-  }
+  };
   if (!lengthValue) {
     movieErrorElement.textContent = 'Length is required!';
     return;
-  }
+  };
   movieErrorElement.textContent = '';
 
   //create movie instance and add it to festival instance
@@ -59,7 +59,7 @@ function addMovie() {
   inputTitleElement.value = '';
   inputLengthElement.value = '';
   selectGenreElement.value = '';
-}
+};
 
 function addProgram() {
   //collect data from user
@@ -69,13 +69,13 @@ function addProgram() {
   if (!dateInputValue) {
     programErrorElement.textContent = 'Date required!';
     return;
-  }
+  };
   var date = new Date(dateInputValue);
 
   if (date.getTime() < Date.now()) {
     programErrorElement.textContent = 'Invalid date!';
     return;
-  }
+  };
   hasProgramWithSameDate = festival.listOfPrograms.some(function (program) {
     return date.getTime() === program.date.getTime();
   });
@@ -83,7 +83,7 @@ function addProgram() {
   if (hasProgramWithSameDate) {
     programErrorElement.textContent = 'Program for same date already exists';
     return;
-  }
+  };
   programErrorElement.textContent = '';
 
   //create program instance and add it to festival instance
@@ -104,7 +104,7 @@ function addProgram() {
   option.setAttribute('value', index);
   option.textContent = program.getData();
   programSelectElement.appendChild(option);
-}
+};
 
 function addMovieToProgram() {
   //collect data
@@ -115,7 +115,7 @@ function addMovieToProgram() {
   if (!movieIndex || !programIndex) {
     addMovieErrorElement.textContent = 'Invalid input';
     return;
-  }
+  };
 
   var movie = festival.listOfAllMovies[movieIndex];
   var program = festival.listOfPrograms[programIndex];
@@ -124,7 +124,7 @@ function addMovieToProgram() {
 
   var liToUpdateNode = document.querySelector('#program-item-' + programIndex);
   liToUpdateNode.textContent = program.getData();
-}
+};
 
 createMovieButton.addEventListener('click', addMovie);
 createProgramButton.addEventListener('click', addProgram);
