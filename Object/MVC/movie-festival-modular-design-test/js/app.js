@@ -1,17 +1,20 @@
 'use strict'
 
 var mainModule = (function (ui, data) {
-    var createMovieButton = document.querySelector('#create-movie'),
-    createProgramButton = documetn.querySelector('#create-program'),
-    addMovieToProgramButton = document.querySelector('#add-movie');
+    var createMovieButton = document.querySelector('#create-movie');
+    var createProgramButton = document.querySelector('#create-program');
+    var addMovieToProgramButton = document.querySelector('#add-movie');
 
     var onMovieCreateClickHandler = function () {
+        /* collect data */
         var formData = ui.collectProgramData();
         var isValid = data.isValidProgram(formData.date);
+        /* validation */
         if (!isValid) {
             ui.setProgramError('Invalid input');
             return;
         }
+        /* create the movie */
         var createdMovie = data.createMovie(formData.title, formData.length, formData.genre
         );
         var index = data.addMovie(createdMovie);

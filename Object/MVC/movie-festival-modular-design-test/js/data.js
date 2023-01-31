@@ -1,6 +1,10 @@
 'use strict'
 
 var dataModule = (function () {
+    function createFestival() { 
+        return new Festival()
+    };
+
     var festival = createFestival();
 
     class Festival {
@@ -10,8 +14,7 @@ var dataModule = (function () {
         };
     };
 
-    /*function createFestival() {
-    }*/
+    var Movie = createMovie();
 
     class Movie {
         constructor (title, length, genre) {
@@ -21,30 +24,32 @@ var dataModule = (function () {
         };
 
         getGenreCode() {
-        var firstLetter = this.genre[0].toUpperCase();
-        var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
-        return firstLetter + lastLetter;
+            var firstLetter = this.genre[0].toUpperCase();
+            var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
+                return firstLetter + lastLetter;
         };
 
         getData() {
             return this.title + ', ' + this.length + 'min ' + this.getGenre();
-    };
+        };
     
-    createMovie() {
-        return new Movie(title, length, genre);
-    };
+        createMovie() {
+            return new Movie(title, length, genre);
+        };
 
-    addMovie() {
-        return festival.listOfAllMovies.push(movie) -1;
-    };
+        addMovie() {
+            return festival.listOfAllMovies.push(Movie) - 1;
+        };
 
-    isValidMovie() {
+        isValidMovie() {
             if (!title || !genre || !length) {
                 return false;
             } return true;
-    };   
+        };   
     };
 
+    var Program = createProgram();
+    
     class Program {
         constructor(date) {
             this.date = date;
@@ -74,4 +79,6 @@ var dataModule = (function () {
             var formatedDate = day + ', ' + (this.movieList.length) + ' movies, duration ' + this.getTotalMoviesLength() + 'min';
         };
     };
+
+    return ispisak
 })();

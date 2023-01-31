@@ -57,10 +57,13 @@ var uiModule = (function () {
     /*function setMovieToProgramError(error) {
 
     }*/
+    function programErrorElement(error) {
+
+    };
 
     function setProgramError(error) {
 
-    } 
+    }; 
 
     function updateProgramList(program, index) {
         var index = festival.programList.length - 1;
@@ -74,6 +77,11 @@ var uiModule = (function () {
         option.textContent = program.getData();
         selectProgramElement.appendChild(option);
     };
+
+    function programSelectElement() {
+
+    };
+
 
     function updateProgramData(program, oldProgramData) {
         var programListElements = document.querySelectorAll('#program-list li');
@@ -92,7 +100,7 @@ var uiModule = (function () {
     });
     movieToProgramErrorElement.textContent = '';
 
-
+    
     return {
         collectMovieData: collectMovieData,
         setMovieError: setMovieError,
