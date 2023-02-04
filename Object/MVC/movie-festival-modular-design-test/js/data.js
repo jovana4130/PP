@@ -1,9 +1,6 @@
 'use strict'
 
 var dataModule = (function () {
-    /*function createFestival() { 
-        return new Festival()
-    };*/
 
     class Festival {
         constructor() {
@@ -13,8 +10,6 @@ var dataModule = (function () {
     };
 
     var festival = new Festival();
-
-    /*var Movie = new Movie();*/
 
     class Movie {
         constructor (title, length, genre) {
@@ -26,16 +21,12 @@ var dataModule = (function () {
         getGenre() {
             var firstLetter = this.genre[0].toUpperCase();
             var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
-                return firstLetter + lastLetter;
+            return firstLetter + lastLetter;
         };
 
         getData() {
             return this.title + ', ' + this.length + 'min ' + this.getGenre();
         };
-    
-        /*function createMovie(title, length, genre) {
-            return new Movie(title, length, genre);
-        };*/
 
         addMovie(Movie) {
             return festival.listOfAllMovies.push(Movie) - 1;
@@ -44,8 +35,13 @@ var dataModule = (function () {
         isValidMovie() {
             if (!title || !genre || !length) {
                 return false;
-            } return true;
+            } 
+            return true;
         };   
+    };
+
+    function createMovie(title, length, genre) {
+            return new Movie(title, length, genre);
     };
     
     class Program {
@@ -61,12 +57,6 @@ var dataModule = (function () {
         addMovie(movie) {
             this.movieList.push(movie);
             };
-        /*function function addProgramToFestival(program){
-        return festival.programList.push(program) -1;
-        };*/
-        /*function addMovieToFestival(movie) {
-            return festival.movieList.push(movie) - 1;
-        }*/
 
         getTotalNumOfMovies() {
             return this.movieList.length;
@@ -94,7 +84,13 @@ var dataModule = (function () {
                 return true;
             };
         };
+    };
 
+    function addProgramToFestival(program){
+        return festival.programList.push(program) -1;
+    };
+    function addMovieToFestival(movie) {
+            return festival.movieList.push(movie) - 1;
     };
 
     function addToFestival(movieIndex, programIndex) {
@@ -114,7 +110,7 @@ var dataModule = (function () {
         createProgram: createProgram,
         addProgramToFestival: addProgramToFestival,
         isValidMovieAndProgram: isValidMovieAndProgram,
-        addToFestival: addToFestival
+        addToFestival: addToFestival,
     };
 
 })();
