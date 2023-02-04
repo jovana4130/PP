@@ -44,7 +44,7 @@ var mainModule = (function (ui, data) {
         }
         ui.updateProgramData(updatedProgram.program, updatedProgram.oldProgram);
     };
-
+    
     createMovieButton.addEventListener('click', onMovieCreateClickHandler);
 
     createProgramButton.addEventListener('click', onProgramCreateClickHandler);
