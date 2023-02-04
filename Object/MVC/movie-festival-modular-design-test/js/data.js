@@ -1,11 +1,9 @@
 'use strict'
 
 var dataModule = (function () {
-    function createFestival() { 
+    /*function createFestival() { 
         return new Festival()
-    };
-
-    var festival = createFestival();
+    };*/
 
     class Festival {
         constructor() {
@@ -14,16 +12,18 @@ var dataModule = (function () {
         };
     };
 
-    var Movie = createMovie();
+    var festival = new Festival();
+
+    /*var Movie = new Movie();*/
 
     class Movie {
         constructor (title, length, genre) {
         this.title = title;
-        this.length = length;
+        this.length = parseInt(length);
         this.genre = genre;
         };
 
-        getGenreCode() {
+        getGenre() {
             var firstLetter = this.genre[0].toUpperCase();
             var lastLetter = this.genre[this.genre.length - 1].toUpperCase();
                 return firstLetter + lastLetter;
@@ -33,11 +33,11 @@ var dataModule = (function () {
             return this.title + ', ' + this.length + 'min ' + this.getGenre();
         };
     
-        createMovie() {
+        /*function createMovie(title, length, genre) {
             return new Movie(title, length, genre);
-        };
+        };*/
 
-        addMovie() {
+        addMovie(Movie) {
             return festival.listOfAllMovies.push(Movie) - 1;
         };
 
@@ -47,8 +47,6 @@ var dataModule = (function () {
             } return true;
         };   
     };
-
-    var Program = createProgram();
     
     class Program {
         constructor(date) {
@@ -56,9 +54,19 @@ var dataModule = (function () {
             this.movieList = [];
             };
 
+        /*var Program = createProgram(date) {
+        return new Program(date);
+        }; */
+
         addMovie(movie) {
             this.movieList.push(movie);
             };
+        /*function function addProgramToFestival(program){
+        return festival.programList.push(program) -1;
+        };*/
+        /*function addMovieToFestival(movie) {
+            return festival.movieList.push(movie) - 1;
+        }*/
 
         getTotalNumOfMovies() {
             return this.movieList.length;
@@ -78,7 +86,35 @@ var dataModule = (function () {
             var year = this.date.getFullYear();
             var formatedDate = day + ', ' + (this.movieList.length) + ' movies, duration ' + this.getTotalMoviesLength() + 'min';
         };
+
+        isValidProgram(date){
+            if (!date) {
+                return false;
+            } else {
+                return true;
+            };
+        };
+
     };
 
-    return ispisak
+    function addToFestival(movieIndex, programIndex) {
+        var Movie = festival.movieList[movieIndex]
+        var program = festival.programList[programIndex]
+        program.movieList.push(Movie);
+        var programList = document.querySelector("#program-item-" + programIndex);
+        programList.textContent = program.getData();  
+    };
+
+
+    return {
+        isValidMovie: isValidMovie,
+        isValidProgram: isValidProgram,
+        addMovie: addMovie,
+        addMovieToFestival: addMovieToFestival,
+        createProgram: createProgram,
+        addProgramToFestival: addProgramToFestival,
+        isValidMovieAndProgram: isValidMovieAndProgram,
+        addToFestival: addToFestival
+    };
+
 })();

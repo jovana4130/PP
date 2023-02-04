@@ -30,9 +30,9 @@ var uiModule = (function () {
     };
 
     function updateMovieList(movie, index) {
-        var movieDataLi = document.createElement('li');
-        movieDataLi.textContent = movie.getData();
-        ulMovieListElement.appendChild(movieDataLi);
+        var movieDataList = document.createElement('li');
+        movieDataList.textContent = movie.getData();
+        ulMovieListElement.appendChild(movieDataList);
 
         var movieOption = document.createElement('li');
         movieOption.textContent = movie.title;
@@ -55,8 +55,9 @@ var uiModule = (function () {
     };
 
     /*function setMovieToProgramError(error) {
-
+        
     }*/
+
     function programErrorElement(error) {
 
     };
@@ -87,18 +88,18 @@ var uiModule = (function () {
         var programListElements = document.querySelectorAll('#program-list li');
         var programSelectOptions = document.querySelectorAll('#program-select option');
 
-    programListElements.forEach(function (li) {
+        programListElements.forEach(function (li) {
         if (li.textContent === oldProgramData) {
             li.textContent = program.getData();
         }
-    });
+        });
 
-    programSelectOptions.forEach(function (option) {
-        if (option.textContent ===oldProgramData) {
+        programSelectOptions.forEach(function (option) {
+        if (option.textContent === oldProgramData) {
             option.textContent = program.getData(); 
         }
-    });
-    movieToProgramErrorElement.textContent = '';
+        });
+        movieToProgramErrorElement.textContent = '';
 
     
     return {
@@ -107,10 +108,10 @@ var uiModule = (function () {
         updateMovieList: updateMovieList,
         clearInputs: clearInputs,
         collectProgramData: collectProgramData,
+        programErrorElement: programErrorElement,
         setProgramError: setProgramError,
         updateProgramList: updateProgramList,
-        collectAddMovieFormData: collectAddMovieFormData,
-        setMovieToProgramError: setMovieToProgramError,
+        programSelectElement: programSelectElement,
         updateProgramData: updateProgramData,
         };
     };
