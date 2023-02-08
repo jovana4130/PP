@@ -158,7 +158,6 @@ non-numeric values.
 year of birth. Retirement for men is at age of 65 and for women at age of 60. If someone is
 already retired, a proper message should be displayed.*/
 
-/*13. Write a function to humanize a number (formats a number to a human-readable string) with
+/* 13. Write a function to humanize a number (formats a number to a human-readable string) with
 the correct suffix such as 1st, 2nd, 3rd or 4th.
-1 -&gt; 1st
-//11 -&gt; 11th */
+1 -&gt; 1st 11 -&gt; 11th */
